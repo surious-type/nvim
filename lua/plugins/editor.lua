@@ -62,7 +62,7 @@ return {
     lazy = false,
     priority = 100,
     config = function()
-      require('nvim-treesitter.configs').setup({
+      require('nvim-treesitter').setup({
         ensure_installed = {
           'lua',
           'vim',
