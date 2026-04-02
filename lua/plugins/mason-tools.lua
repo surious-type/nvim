@@ -1,29 +1,28 @@
 return {
-  {
-    "WhoIsSethDaniel/mason-tool-installer.nvim",
-    dependencies = { "mason.nvim" },
-    opts = {
-      ensure_installed = {
+	{
+		"WhoIsSethDaniel/mason-tool-installer.nvim",
+		dependencies = { "mason.nvim" },
+		opts = {
+			ensure_installed = {
 
-        -- lua
-        "stylua",
+				-- lua
+				-- "stylua",
 
-        -- web
-        "prettier",
+				-- web
+				"prettier",
 
-        -- python
-        "ruff",
+				-- python
+				"ruff",
 
-        -- shell
-        "shfmt",
+				-- shell
+				"shfmt",
 
-        -- php
-        "php-cs-fixer",
-
-      },
-      auto_update = false,
-      run_on_start = true,
-      start_delay = 3000,
-    },
-  },
+				-- php
+				"php-cs-fixer",
+			},
+			auto_update = false,
+			run_on_start = true,
+			start_delay = 3000,
+		},
+	},
 }
