@@ -5,7 +5,7 @@ return {
 		"--clang-tidy",
 		"--completion-style=detailed",
 		"--header-insertion=iwyu",
-		"--fallback-style=LLVM",
+		"--fallback-style={BasedOnStyle: LLVM, IndentWidth: 4, ContinuationIndentWidth: 4, ColumnLimit: 0, AlignAfterOpenBracket: DontAlign, BreakBeforeBraces: Allman}",
 	},
 	filetypes = { "c", "cpp", "objc", "objcpp", "cuda" },
 }
