@@ -148,16 +148,10 @@ return {
 		cmd = { "ConformInfo" },
 		opts = {
 			notify_on_error = false,
-			format_on_save = function(bufnr)
-				local ft = vim.bo[bufnr].filetype
-				if ft == "c" or ft == "cpp" or ft == "cuda" then
-					return nil
-				end
-				return {
-					timeout_ms = 1500,
-					lsp_fallback = true,
-				}
-			end,
+			format_on_save = {
+				timeout_ms = 1500,
+				lsp_format = "fallback",
+			},
 			formatters_by_ft = {
 				lua = { "stylua" },
 				python = { "ruff_format" },
