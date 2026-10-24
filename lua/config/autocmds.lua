@@ -16,3 +16,12 @@ autocmd('LspAttach', {
     end
   end,
 })
+
+autocmd('FileType', {
+  pattern = { 'c', 'cpp', 'cuda' },
+  group = vim.api.nvim_create_augroup('cpp-indent', { clear = true }),
+  callback = function()
+    -- Align a closing ')' with the start of its matching opening line.
+    vim.opt_local.cinoptions:append('m1')
+  end,
+})
