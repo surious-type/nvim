@@ -3,7 +3,6 @@ local opts = { noremap = true, silent = true }
 
 map('n', '<leader>w', '<cmd>w<cr>', opts)
 map('n', '<leader>q', '<cmd>q<cr>', opts)
-map('n', '<leader>e', '<cmd>Oil<cr>', opts)
 map('n', '<leader>ff', '<cmd>Telescope find_files<cr>', opts)
 map('n', '<leader>fg', '<cmd>Telescope live_grep<cr>', opts)
 map('n', '<leader>fb', '<cmd>Telescope buffers<cr>', opts)
@@ -27,3 +26,10 @@ map('n', ']d', vim.diagnostic.goto_next, opts)
 
 map("v", "<Tab>", ">gv")
 map("v", "<S-Tab>", "<gv")
+
+vim.keymap.set("n", "<leader>e", function()
+    vim.cmd("topleft vsplit")
+    vim.cmd("vertical resize 35")
+    vim.cmd("Oil .")
+    vim.wo.winfixwidth = true
+end, { desc = "Открыть Oil слева" })

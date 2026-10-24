@@ -36,10 +36,19 @@ opt.softtabstop = 4
 opt.smartindent = true
 
 opt.fillchars = {
-  eob = ' ',
-  fold = ' ',
-  foldopen = '',
-  foldclose = '',
-  foldsep = ' ',
-  diff = '╱',
+    eob = ' ',
+    fold = ' ',
+    foldopen = '',
+    foldclose = '',
+    foldsep = ' ',
+    diff = '╱',
+}
+
+opt.autoindent = true
+
+g.python_indent = {
+    open_paren = "shiftwidth()",
+    nested_paren = "shiftwidth()",
+    continue = "shiftwidth()",
+    closed_paren_align_last_line = false,
 }
