@@ -16,3 +16,12 @@ autocmd('LspAttach', {
         end
     end,
 })
+
+autocmd('FileType', {
+  pattern = { 'c', 'cpp', 'cuda' },
+  group = vim.api.nvim_create_augroup('cpp-indent', { clear = true }),
+  callback = function()
+    -- Indent arguments one shiftwidth after a multiline call and align ')' with the call.
+    vim.opt_local.cinoptions = '(1s,m1'
+  end,
+})
