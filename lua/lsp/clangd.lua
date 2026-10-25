@@ -4,7 +4,7 @@ return {
 		"--background-index",
 		"--clang-tidy",
 		"--completion-style=detailed",
-		"--header-insertion=never",
+		"--header-insertion=iwyu",
 		-- clangd only accepts a named fallback style; WebKit uses four-space indentation.
 		"--fallback-style=WebKit",
 	},
